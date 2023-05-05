@@ -1,12 +1,13 @@
 import { Route, Routes } from "react-router";
 import { Link } from "react-router-dom";
 import About from "./pages/About";
-import {Home} from "./pages/Home";
+import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import NewBook from "./pages/NewBook";
 import Book from "./pages/Book.js";
 import BookList from "./pages/BookList";
+import "./App.css";
 
 
 
@@ -14,28 +15,31 @@ import BookList from "./pages/BookList";
 function App() {
   return (
     <>
-    <p>Hello</p>
-    <nav>
-      <ul>
-      <li><Link to="/">Home</Link></li>
-      <li><Link to="/about">About</Link></li>
-      <li><Link to="/contact">Contact</Link></li>
-      <li><Link to="/book">books</Link></li>
-      <li><Link to="/booklist">BookList</Link></li>
-      <li><Link to="/newboks">newboks</Link></li>
-      <li><Link to="/notfound">notfound</Link></li>
-      </ul>
-    </nav>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/book" element={<Book />} />
-        <Route path="/booklist" element={<BookList />} />
-        <Route path="/newbooks" element={<NewBook />} />
-        <Route path="/notfound" element={<NotFound />} />
+    <div className="main_container">
+      <div className="navig">
+        <nav>
+          <div className="nav_list"><Link to="/">Home</Link></div>
+          <div className="nav_list"><Link to="/about">About</Link></div>
+          <div className="nav_list"><Link to="/contact">Contact</Link></div>
+          <div className="nav_list"><Link to="/book">Books</Link></div>
+          <div className="nav_list"><Link to="/booklist">BookList</Link></div>
+          <div className="nav_list"><Link to="/newbooks">Newbooks</Link></div>
+          <div className="nav_list"><Link to="/notfound">Notfound</Link></div>
+        </nav>
+      </div>
+      <div className="Routing_div">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/book" element={<Book />} />
+          <Route path="/booklist" element={<BookList />} />
+          <Route path="/newbooks" element={<NewBook />} />
+          <Route path="/notfound" element={<NotFound />} />
 
-      </Routes>
+        </Routes>
+      </div>
+    </div>
     </>
   );
 }

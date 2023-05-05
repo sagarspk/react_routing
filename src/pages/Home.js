@@ -1,6 +1,15 @@
 
-export function Home() {
+import React from 'react'
+
+function Home() {
   return (
-    <div>Home</div>
+    <div>
+      <div className='main_div'>
+        <h1>Welcome page</h1>
+      </div>
+
+    </div>
   )
-};
+}
+
+export default Home
